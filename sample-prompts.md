@@ -30,8 +30,8 @@ Place button in the "action" section of the card and make it a button icon.
 
 Create an openingHoursCard LWC that displays the hours of operation for a given storefront.
 Use the attached image to build the UI.
-Use the existing StoreController.getHoursOfOperation AuraEnabled Apex method that takes the Storefront record ID and returns the hours of operations for the store.
+Use the existing StoreController.getStoreOpeningHours AuraEnabled Apex method that takes the Storefront record ID and returns the hours of operations for the store.
 The LWC should go on the Storefront record page flexipage on top of the right column.
-Grab the record ID from the current page and use a wire to call getHoursOfOperation with the record ID.
+Grab the record ID from the current page and use a wire to call getStoreOpeningHours with the record ID.
 Skip tests.
 Deploy the metadata.
