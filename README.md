@@ -1,20 +1,38 @@
-# DF25 - Pronto Customizations for Agentforce demos
+# DF26 - Pronto customizations for the "Intro to Agentforce Vibes" demo
 
 ## About
 
-Customizes the Pronto reference for Agentforce demos at DF25.
+This branch (`df26-afv-demo`) is the **lean demo project** used in the DF26 AI Force Theater
+_"Intro to Agentforce Vibes"_ session. It runs against a **pre-provisioned Pronto org** and is
+meant to be opened in the **Agentforce Vibes** browser IDE.
 
-Adds the following features:
+It ships:
 
-- Storefront Explorer Lightning page
-- Menu PDF importer via Prompt Template
-- Agents with their actions
-- AI Job monitor
+- `sample-prompts.md` — the six demo prompts (count storefronts → build `latestOrderCard` LWC →
+  Apex tests → Code Analyzer → open-record button → build `openingHoursCard` from an image).
+- `sample-opening-hours.jpg` — the hand-drawn image used by the multimodal prompt (Prompt 6).
+- `.a4drules/custom-salesforce-dx-rules.md` — coding rules the agent follows.
+- `reset-demo.sh` + `reset-metadata/` — resets the org between presenters.
 
-## Setup instructions
+## Prerequisites
 
-Run the setup script on an existing Pronto org:
+- A **Pronto org** already provisioned with the base app + data (storefronts, orders, the
+  **Merchant Management** app, the **Storefront Explorer** page, the **Storefront** record page,
+  and the existing `StoreController.getHoursOfOperation` method used by Prompt 6). If you need to
+  build the base org from scratch, use the `main` branch's setup (`./bin/install.sh` + data plan).
+- The Vibes IDE terminal authenticated to that org as the **default target org** (`sf org display`).
+
+## First-time setup (in the Agentforce Vibes IDE terminal)
 
 ```sh
-./bin/install.sh
+sf update
+npm install
 ```
+
+## Reset the demo (before every talk)
+
+```sh
+./reset-demo.sh
+```
+
+Then close all IDE tabs and clear the Dev Agent history.
