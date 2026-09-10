@@ -727,7 +727,7 @@
       },
       "Customer__c": "@ContactRef14",
       "Storefront__c": "@Storefront__cRef2",
-      "Status__c": "Out for Delivery",
+      "Status__c": "Confirmed",
       "Total_Amount__c": 52,
       "Order_Time__c": "2026-07-29T11:00:00.000+0000",
       "Delivery_Time__c": "2026-07-29T11:45:00.000+0000",
