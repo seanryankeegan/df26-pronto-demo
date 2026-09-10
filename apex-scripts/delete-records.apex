@@ -1,4 +1,5 @@
 // Delete records in reverse order to handle relationships (child to parent)
+delete [SELECT id FROM Case];
 delete [SELECT id FROM Order__c];
 delete [SELECT id FROM Review__c];
 delete [SELECT id FROM Menu_Item__c];
