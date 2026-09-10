@@ -11,7 +11,7 @@ It ships:
 - `sample-prompts.md` — the six demo prompts (count storefronts → build `latestOrderCard` LWC →
   Apex tests → Code Analyzer → open-record button → build `openingHoursCard` from an image).
 - `sample-opening-hours.jpg` — the hand-drawn image used by the multimodal prompt (Prompt 6).
-- `.a4drules/custom-salesforce-dx-rules.md` — coding rules the agent follows.
+- `.afv/rules/pronto-rules.md` — Agentforce Vibes rules for the Pronto project.
 - `reset-demo.sh` + `reset-metadata/` — resets the org between presenters.
 
 ## Prerequisites
